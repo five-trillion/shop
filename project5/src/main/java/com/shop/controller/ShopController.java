@@ -73,6 +73,19 @@ public class ShopController {
 	public void mypage() {
 		
 	}
+	@RequestMapping(value="shop/mypage-content", method = RequestMethod.GET)
+	public void mypage_content() {
+		
+	}@RequestMapping(value="shop/mypage-order", method = RequestMethod.GET)
+	public void mypage_order() {
+		
+	}@RequestMapping(value="shop/mypage-point", method = RequestMethod.GET)
+	public void mypage_point() {
+		
+	}@RequestMapping(value="shop/mypage-user", method = RequestMethod.GET)
+	public void mypage_user() {
+		
+	}
 	/* @RequestMapping(value="shop/freelist", method = RequestMethod.GET)
 	public ModelAndView freelist(Model model) throws Exception {
 	      
@@ -84,14 +97,14 @@ public class ShopController {
 	      mav.setViewName("freelist");
 	      
 	      return mav;
-	} */
+	} 
 	@RequestMapping(value="shop/freedetail", method = RequestMethod.GET)
 	public String freedetail(@RequestParam("boardNo") int boardNo, Model model) throws Exception {
 		BoardVO freeboard = service.freeDetail(boardNo);
 		model.addAttribute("freeboard", freeboard);
 //		댓글목록
-		/* List<BoardReply> list = service.getDetail(boardNo);
-		model.addAttribute("list", list); */
+		List<BoardReply> list = service.getDetail(boardNo);
+		model.addAttribute("list", list);
 		return "detail";
 	}
 //	글쓰기폼
@@ -139,5 +152,5 @@ public class ShopController {
 			return "redirect:list";
 		}
 		return "redirect:detail?bno=" + boardNo;
-	}
+	} */
 }

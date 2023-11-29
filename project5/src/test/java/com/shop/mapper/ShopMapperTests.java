@@ -19,7 +19,7 @@ public class ShopMapperTests {
 	@Test
 	public void testfreeList() {
 		try {
-			mapper.freeList();
+			mapper.freepopList();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

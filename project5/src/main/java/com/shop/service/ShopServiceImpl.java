@@ -65,7 +65,7 @@ public class ShopServiceImpl implements ShopService {
 	@Override
 	public List<ProductVO> prodList() throws Exception{
 		try {
-			System.out.println("=====Service.freeList=====");
+			System.out.println("=====Service.prodList=====");
 			return mapper.prodList();
 		} catch (Exception e) {
 		      log.error("Error fetching prodlist", e);
